@@ -1,0 +1,146 @@
+.header {
+    background: url(../img/header/headerbg.png) no-repeat center center / cover;
+    height: 100dvh;
+}
+
+.nav {
+    padding-top: 50px;
+}
+
+.nav .container {
+    display: flex;
+    flex-direction: column;
+    gap: 178px;
+    align-items: center;
+}
+
+.nav__list {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+@media (max-width:1024px) {
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width:540px) {
+    .nav__list {
+       margin-right: 140px;
+    }
+}
+
+@media (max-width:1024px) {
+    .nav__menu {
+        position: fixed;
+        width: 50%;
+        top: 0;
+        left: 100%;
+        height: 100dvh;
+        background: #fff;
+        border-left: 1px solid #4b4848;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+        z-index: 99;
+    }
+}
+
+@media (max-width: 540px) {
+    .nav__menu {
+        width: 80%;
+    }
+}
+
+.nav__burger {
+    display: none;
+}
+
+@media (max-width: 540px) {
+    .nav__burger:hover ~ .nav__menu {
+        left: 20%;
+    }
+}
+
+@media (max-width:1024px) {
+    .nav__burger {
+        display: flex;
+        width: 50px;
+        height: 45px;
+        align-items: center;
+        margin-left: auto;
+        z-index: 100;
+    }
+
+    .nav__burger:hover ~ .nav__menu {
+        left: 50%;
+    }
+
+    .nav__burger-line {
+        position: relative;
+        background: rgb(127, 85, 22);
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+
+        &::before,
+        &::after{
+            content: "";
+            width: inherit;
+            height: inherit;
+            background: inherit;
+            position: absolute;
+            border-radius: 2px;
+        }
+
+        &::before {
+            top: -10px;
+        }
+
+        &::after {
+            top: 10px;
+        }
+    }
+}
+
+@media (max-width:850px) {
+    .nav__item {
+        text-align: center;
+    }
+}
+
+.nav__link {
+    font-size: 36px;
+    color: #fff;
+    transition: 0.4s;
+
+    &:hover {
+        border-bottom: #85ccdc solid 2px;
+        text-decoration-skip-ink: none;
+        color: #85ccdc;
+    }
+}
+
+@media (max-width:1024px) {
+    .nav__link {
+        color: rgb(127, 85, 22);
+    }
+}
+
+@media (max-width:540px) {
+    .nav__link {
+        color: rgb(127, 85, 22);
+        font-size: 30px;
+    }
+}
+
+.header__logo {
+    max-width: 880px;
+}
+
+
